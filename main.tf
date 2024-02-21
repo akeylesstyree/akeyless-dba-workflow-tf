@@ -38,6 +38,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
+provider "google" {
+  project     = "my-project-id"
+  region      = "us-central1"
+}
+
 # Make a aws mysql instance
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
