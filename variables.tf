@@ -30,6 +30,10 @@
 #     - https://your-gateway-api-address.com that maps to the 8081 port
 #     EOF
 # }
+variable "project_id" {
+  type    = string
+  default = "customer-success-391112"
+}
 
 # variable "AKEYLESS_ACCESS_ID" {
 #     type = string
