@@ -1,16 +1,17 @@
 terraform {
-  # cloud {
-  #   organization = "work-demos"
-  #   workspaces {
-  #     name = "akeyless-dba-workflow-tf"
-  #   }
-  # }
+  cloud {
+    organization = "cs-akl"
+    workspaces {
+      name = "akeyless-dba-workflow-tf"
+    }
+  }
 
   # You can change this backend to be whatever you like.
-  backend "gcs" {
-    bucket = "customer-success-391112-terraform-state-bucket"
-    prefix = "terraform/state/dba-example"
-  }
+  # backend "gcs" {
+  #   bucket = "customer-success-391112-terraform-state-bucket"
+  #   credentials = ""
+  #   prefix = "terraform/state/dba-example"
+  # }
   required_providers {
     akeyless = {
       version = ">= 1.0.0"
