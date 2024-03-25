@@ -22,9 +22,7 @@ steps:
     kvVersion: 'v2'
     strSecretPath: '/Sandbox/2 - Static/Example'
     strPrefixType: 'custom'
-    replaceCR: false'
-    strPrefixType: 'custom'
-    replaceCR: 'false'
+    replaceCR: false
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
