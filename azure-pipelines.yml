@@ -11,15 +11,18 @@ pool:
   
 
 steps:
-- task: VaultReadKV@2
+- task: Vault@2
   inputs:
-    strUrl: 'https://hvp.akeyless.io'
-    ignoreCertificateChecks: true
-    strAuthType: 'clientToken'
-    strToken: 'p-vm6u5y7aqnb3am..wrHRk8YYIPnWWx8nGy/uMPUavDx7kvAmhA5/6eJPYLA='
-    strKVEnginePath: '/secret/data'
-    kvVersion: 'v1'
+    strUrl: 'https://https://hvp.akeyless.io'
+    ignoreCertificateChecks: false
+    strAuthType: 'approle'
+    strRoleID: 'p-vm6u5y7aqnb3am'
+    strSecretID: 'wrHRk8YYIPnWWx8nGy/uMPUavDx7kvAmhA5/6eJPYLA='
+    strKVEnginePath: 'secret'
+    kvVersion: 'v2'
     strSecretPath: '/Sandbox/2 - Static/Example'
+    strPrefixType: 'custom'
+    replaceCR: false'
     strPrefixType: 'custom'
     replaceCR: 'false'
 - script: echo Hello, world!
